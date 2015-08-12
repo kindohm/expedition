@@ -1,0 +1,34 @@
+-- samples
+-- d4
+-- kh
+-- sea
+-- shard
+-- keys2
+-- hh
+
+bps (200/120)
+
+d1 $ whenmod 30 24 (iter 4) $ whenmod 26 20 (slow 1.25) $
+slowspread ($) [id, rev, (|+| coarse "16 32 64"),
+rip 0.2 0.1,
+id, trunc 0.25, trunc 0.25, iter 4, iter 4, iter 4,
+(|+| speed "1.2 1.5 -1.2 0.8"), (|+| accelerate "-3 3"), (|+| speed "0.5") . slow 2,
+(|+| begin "0.5") . density 2,
+(|+| coarse "64 128 256"),
+(|+| end "0.5") . density 2,
+(|+| speed "0.4") . slow 2 . stut 6 0.33 0.66,
+gap 32 . slow 4 . rev,
+rip' 0 1 16 0.2 0.2,
+chop 16, within (0.25, 0.75) ( slow 2 . rev . stut 16 0.2 0.2 . (|+| gain "0")), striate 3, chop 128] $
+foldEvery [3,4] (0.25 <~) $
+stack [
+sound (samples "d4*2" "[0 4 2 1 3 5]/7") |+| cut "1" |+| speed "[0.5 1]/8",
+sound (samples "fk*8?" (run 33)) |+| gain "1" |+| shape "0.3",
+sound "~ ~ ~ sea/3" |+| speed "[1 0.5 0.75]/4",
+sound "~ alps" |+| gain "1",
+sound (samples "keys2*8" (every 2 (0.25 <~) $ every 3 (0.25 <~) $ every 4 (rev) $ run 10)) |+| shape "0.5"
+|+| cutoff (scale 0.05 0.1 $ slow 2.1 sine1) |+| resonance "0.6" |+| delay "0.1",
+every 3 (density 2) $ every 4 (density 2) $ sound "alpch*4" |+| coarse "{8 4 12 2 6}%8"
+] |+| delaytime "0.25" |+| delayfeedback "0.5"
+
+hush

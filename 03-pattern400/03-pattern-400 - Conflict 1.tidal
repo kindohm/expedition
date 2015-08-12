@@ -1,0 +1,24 @@
+-- samples
+-- k
+-- ktite
+-- cy
+-- kit3, kit2, kit4
+-- b:18
+-- ulh
+
+bps (180/120)
+
+d1 $ whenmod 11 9 (gap 16 . rev . slow (4/3)) $
+every 6 (within (0.25, 0.75) (jux (iter 4))) $ every 7 (within (0, 0.5) (|+| speed "8 7 6 5 4 3 2")) $
+every 5 (chop 8 . rev) $ every 4 (gap 4) $ whenmod 16 14 (trunc 0.25) $
+whenmod 16 13 (const $ sound (samples "{[kit3 kit4]*2 [kit2 kit4]*2 [[ulh 400cy]/2 400k]*2}%4" (slow 0.713 $ run 20))) $
+stack [
+whenmod 25 20 (const $ sound "~") $ whenmod 6 4 (degrade) $ every 2 (density 2) $
+sound "{~ 400k:2 [~ 400k:2] ~ 400k*2 400k:1*2}%4",
+whenmod 30 20 (const $ sound "~") $ every 3 (|+| speed "[2,-1.5]") $
+slow 2 $ within (0.5, 0.75) (stut 8 0.25 1) $
+sound (samples "400cy/2 kit3*4 kit2 kit4*8" (slow 0.8181 $ run 30)),
+whenmod 13 11 (const $ sound "~") $ whenmod 12 6 (density (4/3)) $ every 3 (density 2) $ sound "~ b18*2" |+| cut "2",
+every 4 (|+| speed "2 0.5") $ whenmod 5 3 (density 2) $ whenmod 6 4 (stut 4 0.75 0.25) $ sound "[~ ulh]*4" ]
+
+hush

@@ -1,0 +1,41 @@
+bps (200/120)
+
+
+-- whenmod 8 2 (foldEvery [3,2] (rip 0.75 1 . rip 0 0.25 . (0.25 <~)))
+
+d1 $ whenmod 8 6 (|+| speed "0.8") $ foldEvery [3,2] (0.25 <~) $
+stack [
+sound (samples "earth*8?" (slow 0.7 $ run 20)),
+whenmod 9 7 (|+| gain "0") $ sound "~ [cp, stite:17, teks]" |+| shape "0.5",
+whenmod 12 8 (|+| gain "0") $ foldEvery [2,3,4] (density 2) $ every 3 (density 2) $
+sound "hh:24*8" |+| cut "10",
+weave' 3 (sound "~ vocad/2" |+| delay "0.3" |+| shape "0.1")
+    [(|+| speed "0.5"), (0.25 <~), density 2, (|+| speed "-1"), (|+| accelerate "-1")],
+whenmod 16 12 (|+| gain "0") $ sound (samples "[c64 peri]*8?" (slow 0.783 $ run 20))
+|+| shape "0.4" |+| speed "3" |+| cut "12",
+whenmod 13 9 (|+| gain "0") $ density 2 $ sound (samples "kh [~ kh/2]" "5"),
+sound "~ padloop8:1" |+| end "0.05" |+| delay "0.5" ] |+| delaytime "0.4" |+| delayfeedback "0.5"
+
+hush
+
+
+-- solo the earth...
+
+d1 $
+stack [
+sound (samples "earth*8?" (slow 0.7 $ run 20))
+] |+| delaytime "0.4" |+| delayfeedback "0.5"
+
+
+d1 $ density 2 $ sound (samples "kh [~ kh/2]" "5")
+
+d1 $ sound (samples "[c64 peri]*8?" (slow 0.783 $ run 20))
+|+| shape "0" |+| speed "3" |+| cut "12"
+
+d1 $ sound "~ [cp, stite:17, teks]"
+
+d1 $ sound "padloop8:1/2" |+| cut "1"
+
+d1 $ sound "earth:1"
+
+hush

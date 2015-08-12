@@ -1,0 +1,20 @@
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+let up = speed . ((1.059466**) <$>)
+
+bps (160/120)
+
+d1 $ slowspread ($) [id, rev, (|+| accelerate "-0.5 0.5"), (|+| coarse "24 16"), id, rip 0.2 0.1,
+(|+| speed "0.5") . slow 2, striate 8 . slow 3 . rev, zoom (0, 0.25), spin 3] $
+foldEvery [3,4] (0.25 <~) $ stack [
+sound "~ b:8/4",
+foldEvery [6,5,4,3,2] (density 2) $ sound "ecp*2" |+| gain (scale 0.8 1.1 $ density 7 sine1),
+every 7 (rev . gap 4) $ every 6 (|+| coarse "16 32") $ foldEvery [3,4] (0.25 <~) $
+sound (samples "elaz(3,8) es:3" (run 15)) |+| cut "10",
+every 4 (|+| accelerate "-2") $ every 3 (density 2) $ sound (samples "rawk*8?" (run 20)),
+every 4 (|+| speed "[1.5, -1]") $ every 5 (rev) $ whenmod 5 3 (stut 8 0.2 0.5) $ sound "~ raws:18",
+every 3 (|+| delay "0.5") $ density 2 $
+sound "whe" |+| speed "[[-2 -1.5]/3, [-1 -3]/2]" |+| unit "c" |+| delay "0.4" ]
+|+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush

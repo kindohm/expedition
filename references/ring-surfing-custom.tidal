@@ -1,0 +1,21 @@
+bps (200/120)
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+let up = speed . ((1.059466**) <$>)
+
+d1 $ whenmod 8 6 (|+| up "-2") $ foldEvery [3,2] (0.25 <~) $
+stack [
+sound (samples "ringkit*8?" (slow 0.7 $ run 15)) |+| shape "0.5",
+whenmod 9 7 (|+| gain "0") $ sound "~ [rings]" |+| shape "0.3" |+| speed "1.2",
+whenmod 12 8 (|+| gain "0") $ foldEvery [2,3,4] (density 2) $ every 3 (density 2) $
+sound "ringh*8" |+| cut "10",
+weave' 3 (degradeBy 0.1 $ sound "~ vocad/2" |+| delay "0.3" |+| shape "0")
+    [(|+| speed "0.5"), (0.25 <~), density 2, (|+| speed "-1"), (|+| accelerate "-1")],
+whenmod 16 12 (|+| gain "0") $ sound (samples "[gli1 peri]*8?" (slow 0.783 $ run 20))
+|+| shape "[0]*8" |+| speed "3" |+| cut "12",
+whenmod 13 9 (|+| gain "0") $ density 2 $ sound (samples "ringk [~ ringk/2]" "5"),
+sound "~ ringpad" |+| end "0.3" |+| cut "92" |+| delay "0.3" |+| gain "1.1" |+| cutoff "0.1" |+| resonance "0.1" |+| gain "1"  ]
+|+| delaytime "0.4" |+| delayfeedback "0.5"
+
+hush
