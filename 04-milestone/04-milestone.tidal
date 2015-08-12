@@ -18,13 +18,14 @@ density 2 $ sound "~ trans1oh" |+| delay "0.3" |+| end "0.2" |+| cutoff "0.1" |+
 --
 k16 $ note "[47*2 ~] ~" |+| dur "0.07"
 
-d1 $ foldEvery [2,3,4] (7.25 <~) $ stack [
-whenmod 8 4 (|+| coarse "16 32 24") $ sound "[[~ [milekr*2 ~]]]/1" |+| cut "1",
-density 2 $ sound "~ mileoh" |+| cutoff "0.08" |+| resonance "0.01" |+| cut "4" |+| end "0.18" |+| delay "0.3",
-foldEvery [3,5,7] (density (4/3)) $ foldEvery [2,4,6] (density 2) $
-sound "milek1*8" |+| cutoff (scale 0.005 0.5 $ slow 8 sine1) |+| resonance "0.4" |+| cut "3" |+| speed "5" |+| gain "0.8" ]
+d1 $ superimpose (slow 1.02) $ whenmod 12 10 (trunc 0.25) $ every 7 (gap 4) $ every 6 (chop 16) $
+every 5 (|+| accelerate "-0.5 0.5") $ foldEvery [3,4] (17.25 <~) $ stack [
+whenmod 12 8 ((|+| coarse "{8 12 16}%8") . stut 2 1 0.125) $ whenmod 20 10 ((|+| speed "-1") . (|+| end rand)) $ sound "milekr" |+| cut "1",
+sound "~ [kit3:4*2 milek2]" |+| cut "2" |+| speed "1 [0.8 1.2]",
+density 2 $ sound "~ mileoh" |+| cutoff (scale 0.01 0.1 $ slow 16 sine1) |+| resonance "0.01" |+| cut "4" |+| end "0.18" |+| delay "0.3",
+(|+| cutoff (scale 0.001 0.2 $ slow 16 sine1)) $ whenmod 12 8 (slow (4/3)) $ whenmod 25 17 (slow (4/3)) $ whenmod 18 12 (slow (4/3)) $ whenmod 30 20 (slow (4/3)) $
+sound "kit3:8*32" |+| resonance "0.1" |+| speed "1" |+| gain "0.8" |+| cut "100" ]
 |+| delaytime "0.65" |+| delayfeedback "0.7"
-
 
 hush
 
