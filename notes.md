@@ -1,13 +1,9 @@
 pattern 406                   ("Transmission 1") alien drone thing)
 pattern 421                   ("Surface Stealth" pocket cat)
 pattern 400                   ("something about cruising" busy delay perc)
-milestone                     (checkpoint?)
-ffiivvee                      ("cadet? nursery wing?" if you can do it...)
 ring surfing
 repeating distress beacon
 galactic alpaca / pattern 395
-atmospheric probe malfunction
-pattern 416                   ("Repair Bay 72" industrial thing)
 38d0f91a                      ("Transmission 2") gli1 super glitch?) (a.k.a. "hash")
 pattern 423                   (humans taking selfies on bicycles) 
 pattern 338                   (electrowave lazer bombardment)
@@ -22,10 +18,10 @@ pattern 379 (volca drums with weird alien sound)
 # even another EP...
 warm waves (do a new live-coded take (eek))
 
+# worth reconsidering
+pattern 392                   (something about cruising speed?  happy arps)
 
 # probably not making the cut
-
-pattern 392                   (something about cruising speed?  happy arps)
 pattern 404 (has interesting cowbells)
 pattern 382
 pattern 419 (laz2/ow1)
@@ -36,6 +32,13 @@ adrift no reserve
 pattern 313 (dense drum industrial drilling)
 pattern 405
 pattern 418 (bedlam intro)
+
+# made the cut but don't have the code or too difficult
+milestone                     (checkpoint?)
+ffiivvee                      ("cadet? nursery wing?" if you can do it...)
+pattern 416                   ("Repair Bay 72" industrial thing)
+atmospheric probe malfunction
+
 
 # candidates
 
