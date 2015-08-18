@@ -1,0 +1,24 @@
+cps 0.5
+
+d1 $ foldEvery [2,3,4,5,6,7] (slow 1.2) $
+whenmod 20 16 (jux (iter 4) . spread' (striate' 16) (scale 0.001 0.07 $ density 4 sine1) . slow 8) $
+whenmod 23 18 (degrade) $
+every 5 (rev) $
+whenmod 16 12 (iter 4) $ every 7 (|+| accelerate "-1 1 -2 2 -3 3 -4 4") $
+whenmod 8 6 (trunc 0.25) $
+every 11 (stut 16 0.2 2 . slow 1.5) $
+whenmod 16 14 (|+| crush "-2 7 -5 -10 11") $
+every 8 (gap 32 . slow 4 . jux (iter 4)) $
+every 6 (slow 2 . stut 4 0.1 2) $
+whenmod 32 27 (|+| up "[-2,-4,-6,-8,-10]") $
+every 4 (chop 16 . slow 2 . rev) $
+whenmod 25 20 (|+| up "[2,4,6,8,10]") $
+whenmod 25 18 (slow 2 . (|+| speed "4")) $
+every 9 (|+| speed "[8,12]") $ every 11 (|+| speed "-8") $
+sound (samples "{fall fall2 fall fall2 fall}%8" (every 4 (const $ run 20) $ every 3 (const $ run 30) $ every 2 (const $ run 40) $ run 50))
+|+| unit "c" |+| speed "8"
+|+| delay (scale 0.1 0.7 $ slow 6 sine1)
+|+| delayfeedback (scale 0.3 0.95 $ slow 5 sine1)
+|+| delaytime (scale 0.01 0.2 $ slow 7 sine1)
+
+hush

@@ -1,0 +1,22 @@
+
+cps 0.75
+
+d1 $ whenmod 23 18 (degrade) $ whenmod 20 15 (|+| cutoff (scale 0.001 0.1 $ slow 8 sine1)) $
+whenmod 16 12 (iter 4) $ every 8 (|+| accelerate "-1 1 -2 2") $ whenmod 8 6 (trunc 0.125) $
+every 11 (stut 8 0.2 2) $ every 11 (degrade) $
+whenmod 19 16 (|+| up "[2,4,6,8,10]") $
+whenmod 21 19 (|+| up "[-2,-4,-6,-8,-10]") $
+every 7 (gap 16 . slow 2 . jux (iter 8)) $ every 6 (slow 2 . stut 4 0.1 (4/3)) $ every 5 (rev) $ every 4 (chop 12) $
+foldEvery [4,6] (|+| coarse "{128 64 256 300 512}%16") $
+whenmod 14 10 (foldEvery [3,4] (5.25 ~>)) $
+every 12 (spin 3) $
+whenmod 18 14 (slow 1.25 . (|+| speed "6")) $
+whenmod 25 18 (slow 2 . (|+| speed "4")) $
+every 9 (|+| speed "[8,12]") $ every 11 (|+| speed "-8") $
+sound (samples "{bit1 bit1 bit1 bit1 bit1 bit1 bit1}%8" (every 4 (const $ run 50) $ every 3 (const $ run 30) $ run 20))
+|+| unit "c" |+| speed "8" |+| resonance "0.5"
+|+| delay (scale 0.01 0.7 $ slow 7 sine1)
+|+| delayfeedback (scale 0.1 0.95 $ slow 8 sine1)
+|+| delaytime (scale 0.05 0.3 $ slow 10 sine1)
+
+hush
