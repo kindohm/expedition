@@ -12,19 +12,9 @@ import Sound.Tidal.VolcaBass
 keyStreams <- keyproxy 1 "Scarlett 18i8 USB" [(bass,1)]
 [bass] <- sequence keyStreams
 
-d1 $ jux (iter 4) $ sound "selffx:1/4" |+| shape "0.4"
+d1 $ jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1"
 |+| speed "{1 1.5 1}%16" |+| delay "0.6"
 |+| delaytime "0.5" |+| delayfeedback "0.6"
-
-bass silence
-
-bass $ note ((+56) <$> (every 4 ((subtract 2) <$>) . every 3 ((subtract 4) <$>) . every 2 ((subtract 3) <$>)) ("{0 2 0 -1 -6*2}%8"))
-|+| dur "0.03"
-|+| pitch1 "0"
-|+| lforate "0.01"
-|+| lfoint "0.9"
-|+| decay "0.9"
-|+| cutoffegint "1"
 
 k16 $ note ((+44) <$> (every 4 ((subtract 2) <$>) . every 3 ((subtract 4) <$>) . every 2 ((subtract 3) <$>)) ("{0 2 0 -1 -6*2}%8"))
 |+| dur "0.03"
@@ -32,23 +22,30 @@ k16 $ note ((+44) <$> (every 4 ((subtract 2) <$>) . every 3 ((subtract 4) <$>) .
 k16 silence
 
 d1 $ whenmod 12 10 (trunc 0.25) $
-whenmod 6 3 (iter 4) $ stack [
-foldEvery [2,3,4] (15.75 ~>) $ slowcat [
-sound (samples "akuma1*8" (irand 16))  |+| shape "0.2",
-sound (samples "nu*8" (irand 16))  |+| shape "0.1",
-sound (samples "akuma3*8" (irand 16))  |+| shape "0.1",
-sound (samples "akuma4*8" (irand 16))  |+| shape "0.1",
-sound (samples "think*8" (irand 16)) |+| shape "0.7" |+| speed "1.7",
-sound (samples "akuma5*8" (irand 16))  |+| shape "0.1",
-sound (samples "funky*8" (irand 16))  |+| shape "0.1" |+| speed "2"
+whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
+slowcat [
+sound (samples "fur3*8" (irand 32)) |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "akuma3*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "teeny3*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "fur1*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "teeny2*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "ion1*8" (irand 32))  |+| shape "0.1" |+| unit "c" |+| speed "8",
+sound (samples "akuma4*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "teeny1*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "ion2*8" (irand 32))  |+| shape "0.1" |+| unit "c" |+| speed "8",
+sound (samples "think*8" (irand 32)) |+| shape "0.7"  |+| speed "4" |+| unit "c",
+sound (samples "ion3*8" (irand 32))  |+| shape "0.1" |+| unit "c" |+| speed "8",
+sound (samples "akuma5*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "fur2*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "ion4*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "teeny4*8" (irand 32))  |+| shape "0" |+| unit "c" |+| speed "8",
+sound (samples "funky*8" (irand 32))  |+| shape "0"  |+| unit "c" |+| speed "8"
 ],
-jux (iter 4) $ sound "{selffx:1 ~ ~}%1" |+| shape "0.3" |+| speed "1",
+jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 sound "selfcpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16" |+| gain "1.2",
-slow 6 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8",
+slow 6 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8" |+| delay "0.5",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 selfs" (run 32)) |+| shape "0.3 0.4" ]
-
-
-bass silence
+|+| delaytime "0.5" |+| delayfeedback "0.5"
 
 hush
 
