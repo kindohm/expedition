@@ -2,6 +2,27 @@
 
 cps 0.5
 
+d1 $ whenmod 20 15 (trunc 0.125) $ whenmod 9 4 (slow 1.25) $
+every 3 (jux (iter 3)) $ every 2 (rev) $
+whenmod 14 10 (|+| cutoff "0.01") $ foldEvery [4,3,2] (slow 2.25) $
+superimpose (foldEvery [1,2,3,4,5,6,7,8] (slow 1.01)) $
+slow 8 $
+foldEvery [3,4] (|+| accelerate "-1") $
+every 4 (chop 6 . slow 36 . (|+| speed "-0.5") . (|+| accelerate "-2")) $
+(spread' (striate' 3000) (scale 0.005 0.07 $ density 1 sine1) $
+whenmod 16 12 (degradeBy 0.8) $
+sound "[bit1:21 bit1:16 bit1:10]/3")
+|+| speed (foldEvery [2,3,4] (density 2) $ "[{1 1.5 2}%128, {0.5 0.75 1.25 1.75 2.5}%64]")
+|+| delay (scale 0.1 0.5 $ sine1)
+|+| delaytime (scale 0.01 0.3 $ slow 1.5 sine1)
+|+| delayfeedback (scale 0.5 0.95 $ slow 1.2 sine1)
+|+| resonance "0.1"
+|+| coarse "{0 4 0 2 0 8 12}%16"
+|+| crush "{5 -5 0 2 -3 4 0 7 -6}%12"
+
+hush
+
+-- original
 d1 $ whenmod 15 11 (iter 4 . trunc 0.125) $ sometimes (jux (rev)) $
 sometimes (rev) $ foldEvery [2,3,4] (2.25 <~) $
 whenmod 25 18 ((|+| up "[{48 24 52 55 62}%16, {36 50 60}%16]") . stut 8 0.25 0.25) $
