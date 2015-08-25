@@ -1,11 +1,3 @@
--- samples
--- k
--- ktite
--- cy
--- kit3, kit2, kit4
--- b:18
--- ulh
-
 bps (180/120)
 
 d1 $ whenmod 11 9 (gap 16 . rev . slow (4/3)) $
