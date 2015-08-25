@@ -1,12 +1,15 @@
 
-cps 0.75
+cps 0.7
 
 d1 $ whenmod 23 18 (degrade) $ whenmod 20 15 (|+| cutoff (scale 0.001 0.1 $ slow 8 sine1)) $
 whenmod 16 12 (iter 4) $ every 8 (|+| accelerate "-1 1 -2 2") $ whenmod 8 6 (trunc 0.125) $
 every 11 (stut 8 0.2 2) $ every 11 (degrade) $
 whenmod 19 16 (|+| up "[2,4,6,8,10]") $
 whenmod 21 19 (|+| up "[-2,-4,-6,-8,-10]") $
-every 7 (gap 16 . slow 2 . jux (iter 8)) $ every 6 (slow 2 . stut 4 0.1 (4/3)) $ every 5 (rev) $ every 4 (chop 12) $
+every 7 (gap 16 . slow 2 . jux (iter 8)) $
+every 6 (slow 2 . stut 4 0.1 (4/3)) $
+every 5 (rev) $
+every 4 (chop 12) $
 foldEvery [4,6] (|+| coarse "{128 64 256 300 512}%16") $
 whenmod 14 10 (foldEvery [3,4] (5.25 ~>)) $
 every 12 (spin 3) $
