@@ -9,12 +9,13 @@ whenmod 8 6 (trunc 0.25) $ foldEvery [2,3,4] (density 2) $
 foldEvery [3,4] (5.25 <~) $
 every 5 (const $ jux (iter 4) $ sound (samples "fk*32" (slow 0.71131 $ run 50))) $
 whenmod 4 2 (const $ foldEvery [3,4] (density (4/3)) $
-sound (samples "fk*16 [~ laz] [fk laz fk laz] [fk laz fk laz]" (irand 64))
-|+| shape "0.5 [0.6 0] 0 0" |+| speed "0.8 0.5") $
+stack [sound (samples "fk*16 [teks laz] [fk laz fk laz] [fk laz fk laz]" (density 1.37 $ run 64))
+|+| shape "0.5 [0.5 0] 0 0" |+| speed "0.8 0.5", sound "~ alps ~ ~" |+| speed "0.8"]) $
 stack [
 whenmod 12 8 (trunc 0.25) $ degradeBy 0.6 $ sound (samples "bit1*8" (slow 0.75 $ run 50)) |+| shape "0.5"
-|+| unit "c" |+| speed "{12 8 16}%8" |+| gain "1.1",
+|+| unit "c" |+| speed "{12 8 16}%8" |+| gain "0.8",
 sound (samples "fk*16?" (run 50)) |+| shape "0.5",
-sound (samples "[electrowave*8? laz*8?]/2" (irand 16)) |+| end "0.5 1" |+| gain "[1.2 0.9]/2"]
+sound (samples "[electrowave*8? laz*8?]/2" (density 1.71 $ run 7)) |+| end "0.5 1" |+| cut "84"]
+
 
 hush
