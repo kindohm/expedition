@@ -5,7 +5,7 @@ d1 $ stack [
 sound (samples "d4*2" "[0]") |+| cut "1" |+| speed "[1]",
 density 2 $ sound (samples "fk [~ fk]" (run 33)) |+| gain "1" |+| shape "0.3",
 density 2 $ sound (samples "keys2b*4" (run 4)) |+| gain "0.9"
-|+| shape "0.4" |+| cutoff (scale 0.05 0.2 $ slow 2.1 sine1) |+| resonance "0.4" |+| delay "0.1",
+|+| shape "0.4" |+| delay "0.1",
 foldEvery [2,3,4] (density 2) $ sound "alpch*4" |+| gain "0.9"
 ] |+| delaytime "0.25" |+| delayfeedback "0.5"
 
@@ -18,38 +18,36 @@ sound (samples "fk*8?" (run 33)) |+| gain "1" |+| shape "0.3",
 sound "~ ~ ~ sea/3" |+| speed "[1 0.5 0.75]/4",
 sound "~ alps:1" |+| gain "1",
 whenmod 16 10 (const $ sound "~") $
-whenmod 12 8 (|+| cutoff (scale 0.01 0.05 $ slow 2.81 sine1)) $
+whenmod 8 4 (rarely (|+| speed "{0.5 [1.5, 3] [2, 1.25]}%16")) $
 sound (samples "keys2b*8" (foldEvery [2,3] (0.25 <~) $ every 4 (rev) $ run 10))
 |+| shape "0.4" |+| resonance "0.4" |+| delay "0.1" |+| gain "0.9",
 foldEvery [2,3,4] (density 2) $ sound "alpch*4" |+| gain "0.9"
 ] |+| delaytime "0.25" |+| delayfeedback "0.5"
 
--- main
-d1 $ whenmod 30 24 (iter 4) $ whenmod 26 20 (slow 1.25) $
-slowspread ($) [id, rev, (|+| coarse "16 32 64"),
-rip 0.2 0.1,
-id, trunc 0.25, trunc 0.25, iter 4, iter 4,
-jux (iter 4),
-rip' 0 1 6 0.25 0.33,
-(|+| speed "1.2 1.5 -1.2 0.8"), (|+| accelerate "-3 3"), (|+| speed "0.5") . slow 2,
-(|+| begin "0.5") . density 2,
-(|+| coarse "64 128 256"),
- (|+| accelerate "-1 1"),
-(|+| end "0.5") . density 2,
-(|+| speed "0.4") . slow 2 . stut 6 0.33 0.66,
-gap 32 . slow 4 . rev,
-rip' 0 1 16 0.2 0.2,
-chop 16, rip 0.2 0.2, striate 3, chop 128] $
+-- main....
+d1 $
+whenmod 9 3 (whenmod 20 16 (slow 1.25) .
+whenmod 9 7 (jux (iter 4)) .
+every 5 (rev) .
+every 10 (rip' 0 1 8 0.2 0.1) .
+every 11 (stut 4 0.2 0.66) .
+whenmod 10 8 (trunc 0.25) .
+every 6 (chop 16 . slow 1.5) .
+every 7 (gap 6 . slow 1.5 . rev) .
+every 8 (|+| coarse "{64 32 8 16 72}%8")) $
 foldEvery [3,4] (5.25 <~) $
 stack [
-sound (samples "d4*2" "[0 4 2 1 3 5]/7") |+| cut "1" |+| speed "[0.5 1]/8",
-sound (samples "fk*8?" (run 33)) |+| gain "1" |+| shape "0.3",
+whenmod 8 6 (const $ sound "~") $ sound (samples "d4*2" "[0 4 2 1 3 5]/7") |+| cut "1" |+| speed "[0.5 1]/8",
+every 8 (density 2) $
+every 5 (density 2 . degradeBy 0.1) $ sound (samples "fk*8?" (run 33)) |+| gain "1" |+| shape "0.3",
 sound "~ ~ ~ sea/3" |+| speed "[1 0.5 0.75]/4",
-sound "~ alps:1" |+| gain "1",
+sound "~ alps:1" |+| gain "1" |+| shape "0.1",
+whenmod 14 8 (const $ sound "~") $ rarely (density 2) $
+sound (samples "peri*8" (density 1.21 $ run 11)) |+| end "0.5" |+| speed "1.5" |+| shape "0.1",
 whenmod 16 10 (const $ sound "~") $
-whenmod 12 8 (|+| cutoff (scale 0.01 0.05 $ slow 2.81 sine1)) $
+whenmod 8 4 (rarely (|+| speed "{0.5 [1.5, 3] [2, 1.25]}%16")) $
 sound (samples "keys2b*8" (foldEvery [2,3] (0.25 <~) $ every 4 (rev) $ run 10))
-|+| shape "0.4" |+| resonance "0.4" |+| delay "0.1" |+| gain "0.9",
+|+| shape "0.4" |+| delay "0.1" |+| gain "0.9",
 foldEvery [2,3,4] (density 2) $ sound "alpch*4" |+| gain "0.9"
 ] |+| delaytime "0.25" |+| delayfeedback "0.5"
 
