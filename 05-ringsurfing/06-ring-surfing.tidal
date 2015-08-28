@@ -1,12 +1,12 @@
 bps (200/120)
 
-d1 $ whenmod 14 12 (trunc 0.25) $
-every 8 (gap 8 . rev . slow 2) $ every 7 (rip' 0 1 4 0.2 0.1) $
-every 6 (chop 16 . rev) $
-every 11 (|+| speed "1, 1.5, 2") $
-every 10 (|+| accelerate "[0.5]") $
-every 9 (striate 4 . slow 2 . rev) $
-whenmod 36 26 (every 3 (|+| up "[-4 2]*4") . rarely (gap 8) . sometimes (rev) . every 2 (rip' 0 1 4 0.1 0.33) . (|+| coarse "{8 12 16 32 24}%16")) $
+d1 $ whenmod 14 12 (trunc 0.25) .
+every 8 (gap 8 . rev . slow 2) . every 7 (rip' 0 1 4 0.2 0.1) .
+every 6 (chop 16 . rev) .
+every 11 (|+| speed "1, 1.5, 2") .
+every 10 (|+| accelerate "[0.5]") .
+every 9 (striate 4 . slow 2 . rev) .
+whenmod 36 26 (every 2 (|+| up "[-4 2]*4") . rarely (gap 8) . sometimes (rev) . every 3 (rip' 0 1 4 0.1 0.33) . (|+| coarse "{8 12 16 32 24}%16")) $
 whenmod 8 6 (|+| up "-2") $ foldEvery [3,2] (7.25 <~) $
 stack [
 whenmod 25 25 (const $ sound "~") $ sound (samples "ringkit*8?" (slow 0.7 $ run 15)),
