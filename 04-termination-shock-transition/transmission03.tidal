@@ -1,8 +1,8 @@
-
 cps 0.7
 
 d1 $ foldEvery [2,3,4] (density 1.1) $ whenmod 23 18 (degrade) $ whenmod 20 15 (|+| cutoff (scale 0.01 0.2 $ slow 1.25 sine1)) $
 whenmod 16 14 (iter 4) $ every 8 (|+| accelerate "-1 1 -2 2") $ whenmod 8 6 (trunc 0.25) $
+whenmod 8 5 (superimpose (slow 1.04) . sometimes (rev)) $
 every 11 (degrade) $
 whenmod 12 9 (|+| up "[2,4,6]") $
 whenmod 15 12 (|+| up "[2 4 6 8 10]*2") $
@@ -17,11 +17,11 @@ every 12 (spin 3) $
 whenmod 18 14 (slow 1.25 . (|+| speed "6")) $
 whenmod 25 18 (slow 2 . (|+| speed "4")) $
 every 9 (|+| speed "[8,12]") $ every 11 (|+| speed "-8") $
-sound (samples "{bit1 bit1 bit1 bit1 bit1 bit1 bit1}%8" (every 4 (const $ run 50) $ every 3 (const $ run 30) $ run 20))
+sound (samples "{bit1 bit1 b18b bit1 bit1 bit1 kit3 kit5 kit7}%8" (every 4 (const $ run 50) $ every 3 (const $ run 30) $ run 20))
 |+| unit "c" |+| speed "8" |+| resonance "0.5"
 |+| delay (scale 0.01 0.7 $ slow 7 sine1)
 |+| delayfeedback (scale 0.1 0.9 $ slow 8 sine1)
-|+| delaytime (scale 0.05 0.3 $ slow 10 sine1)
+|+| delaytime (scale 0.05 0.5 $ slow 10 sine1)
 |+| shape (scale 0 0.25 $ rand)
 
 hush
