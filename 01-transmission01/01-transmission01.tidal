@@ -1,19 +1,14 @@
 cps 0.4
 
 d1 $
-jux (foldEvery [2,3,4] (3.25 <~)) $
-slow 2 $ superimpose ((|+| speed "0.25") . (0.5 ~>)) $ (striate' 128 (1/20) $
+jux (foldEvery [2,3,4] (3.75 <~)) $
+slow 2 $ superimpose ((|+| speed "0.25") . (slow 1.06)) $
+(rarely (|+| accelerate "-1") $ striate' 128 (1/20) $
 foldEvery [2,3] (density 1.25) $ sound "trans1")
-|+| speed "{1 -1.5 0.5 0.75 1.25 2}%1" |+| delay "0.3"
-|+| delaytime "0.5" |+| delayfeedback "0.5"
-|+| hresonance "0.6" |+| hcutoff (scale 0.07 0.3 $ density 3 saw1)
-
-
-|+| resonance "0.6" |+| cutoff (scale 0.01 0.2 $ density 4 saw1) |+| shape "0.2" ]
-
-d2 $ slow 2 $ sound "trans1speech" |+| unit "c" |+| speed "0.0357142857142857"
-|+| cut "9" |+| shape "0.3" |+| gain "1.2"
-
-d2 silence
+|+| delay "0.3"
+|+| delaytime "0.5"
+|+| delayfeedback "0.5"
+|+| speed "{1 -1.5 0.5 0.75 1.25 2 0.5}%1"
+|+| hresonance "0.6" |+| hcutoff (scale 0.02 0.3 $ foldEvery [2,3] (density 2) $ density 3 saw1)
 
 hush
