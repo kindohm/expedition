@@ -3,12 +3,13 @@ cps 0.4
 d1 $
 jux (foldEvery [2,3,4] (3.75 <~)) $
 slow 2 $ superimpose ((|+| speed "0.25") . (slow 1.06)) $
-(rarely (|+| accelerate "[-1 1]*3") $ striate' 128 (1/20) $
+((rarely (|+| accelerate "[-1 1]*3") $ striate' 128 (1/20) $
 foldEvery [2,3] (density 1.25) $ sound "trans1")
-|+| delay "0.3"
+|+| hresonance "0.8"
+|+| hcutoff (scale 0.05 0.2 $ whenmod 4 2 ((negate) <$>) $ foldEvery [2,3] (density 2) $ density 2 saw1))
+|+| delay "0.2"
 |+| delaytime "0.5"
 |+| delayfeedback "0.5"
 |+| speed "{1 -1.5 0.5 0.75 1.25 2 0.5}%1"
-|+| hresonance "0.6" |+| hcutoff (scale 0.02 0.3 $ foldEvery [2,3] (density 2) $ density 3 saw1)
 
 hush
