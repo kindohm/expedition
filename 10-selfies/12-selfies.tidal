@@ -2,7 +2,7 @@ bps (200/120)
 
 hush
 
-d1 $ jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1"
+d1 $ jux (iter 4) $ sound "selffx/4" |+| shape "0.1"
 |+| speed "{1 1.5 1}%16" |+| delay "0.6"
 |+| delaytime "0.5" |+| delayfeedback "0.6"
 
@@ -17,7 +17,7 @@ let breaks = slowcat [ sound (samples "fur3*8" (irand 32)) |+| shape "0" |+| uni
 d1 $ whenmod 12 10 (trunc 0.25) $
 whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
 breaks,
-jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
+jux (iter 4) $ sound "selffx/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 sound "selfcpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16" |+| gain "1.2",
 slow 6 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8" |+| delay "0.5",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 selfs" (run 32)) |+| shape "0.3 0.4" ]
@@ -26,7 +26,7 @@ whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 selfs" (r
 -- remove breaks
 d1 $ whenmod 12 10 (trunc 0.25) $
 whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
-jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
+jux (iter 4) $ sound "selffx/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 sound "selfcpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16" |+| gain "1.2",
 slow 6 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8" |+| delay "0.5",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 32)) |+| shape "0.3 0.4" ]
@@ -35,7 +35,7 @@ whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 3
 -- remove melt
 d1 $ whenmod 12 10 (trunc 0.25) $
 whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
-jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
+jux (iter 4) $ sound "selffx/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 sound "selfcpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16" |+| gain "1.2",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 32)) |+| shape "0.3 0.4" ]
 |+| delaytime "0.5" |+| delayfeedback "0.5"
@@ -43,7 +43,7 @@ whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 3
 -- remove snare
 d1 $ whenmod 12 10 (trunc 0.25) $
 whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
-jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
+jux (iter 4) $ sound "selffx/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 32)) |+| shape "0.3 0.4" ]
 |+| delaytime "0.5" |+| delayfeedback "0.5"
 
@@ -51,7 +51,7 @@ whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 ~" (run 3
 d1 $ whenmod 12 10 (trunc 0.25) $
 whenmod 6 3 (iter 4) $ foldEvery [2,3,4] (11.75 ~>) $ stack [
 breaks,
-jux (iter 4) $ sound "selffx:1/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
+jux (iter 4) $ sound "selffx/4" |+| shape "0.1" |+| speed "{1 1.5 1}%16",
 sound "selfcpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16" |+| gain "1.2",
 slow 6 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8" |+| delay "0.5",
 whenmod 16 10 (slow 2) $ jux (iter 4) $ slow 2 $ sound (samples "fk*16 selfs" (run 32)) |+| shape "0.3 0.4" ]
