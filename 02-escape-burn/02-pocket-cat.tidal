@@ -22,7 +22,7 @@ foldEvery [2,3,4] (density 2) $ sound "pockch*4" |+| speed "1"]
 
 -- break!
 d1 $ stack [
-slow 2 $ sound (samples "fk*8 [[pockcp, pocks:1] fk*4?] fk*8 [[pockcp, pocks:1] fk*4]" (run 60)) |+| shape "0 0.5 0 0.5",
+slow 2 $ sound (samples "fk*8 [[pockcp, pocks] fk*4?] fk*8 [[pockcp, pocks] fk*4]" (run 60)) |+| shape "0 0.5 0 0.5",
 foldEvery [2,3,4] (density 2) $ sound "pockch*4" |+| speed "1" |+| cut "1" |+| gain "1"]
 
 -- main
@@ -31,7 +31,7 @@ d1 $ stack [
 |+| gain "[1 [0 1 1 1] 1 [0 1 1 1]]/2"
 |+| begin (scale 0 0.8 $ rand) |+| cut "1"
 |+| speed "0.9",
-slow 2 $ sound (samples "fk*8 pocks:1 ~ pocks:1" (run 60)) |+| shape "0 0.5 0 0.5",
+slow 2 $ sound (samples "fk*8 pocks ~ pocks" (run 60)) |+| shape "0 0.5 0 0.5",
 sound "fk:1*8?",
 jux (iter 8) $ stut 2 0.5 0.25 $ sound "~ pockcp" |+| shape "0.3",
 foldEvery [2,3,4] (density 2) $ sound "pockch*4" |+| speed "1"]
@@ -44,7 +44,7 @@ iter 4, iter 4, gap 16 . slow 3 . rev,
 foldEvery [3,4] (13.25 <~) $ stack [
 every 5 (|+| speed "-0.9") $ (|+| coarse "{8 16 24}%4") $ sound "electrowave*8"
 |+| begin (scale 0 0.8 $ rand) |+| cut "1" |+| speed "0.9",
-foldEvery [3,4] (0.25 <~) $ slow 2 $ sound (samples "fk*8 pocks:1 ~ pocks:1" (run 60)) |+| shape "0 0.2 0 0.2",
+foldEvery [3,4] (0.25 <~) $ slow 2 $ sound (samples "fk*8 pocks ~ pocks" (run 60)) |+| shape "0 0.2 0 0.2",
 sound "fk:1*8?",
 jux (iter 8) $ stut 2 0.5 0.25 $ sound "~ pockcp" |+| shape "0.3",
 foldEvery [2,3,4] (density 2) $ sound "pockch*4" |+| speed "1"]
@@ -68,7 +68,7 @@ foldEvery [3,4] (13.25 <~) $ stack [
 every 5 (|+| speed "-0.9") $ (|+| coarse "{8 16 24}%4") $ sound "electrowave*8"
 |+| begin (scale 0 0.8 $ rand) |+| cut "1"
 |+| speed "0.9",
-foldEvery [3,4] (0.25 <~) $ slow 2 $ sound (samples "fk*8 pocks:1 ~ pocks:1" (run 60)) |+| shape "0 0.2 0 0.2",
+foldEvery [3,4] (0.25 <~) $ slow 2 $ sound (samples "fk*8 pocks ~ pocks" (run 60)) |+| shape "0 0.2 0 0.2",
 sound "fk:1*8?",
 jux (iter 8) $ stut 2 0.5 0.25 $ sound "~ pockcp" |+| shape "0.3",
 foldEvery [2,3,4] (density 2) $ sound "pockch*4" |+| speed "1"]

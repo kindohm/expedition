@@ -8,6 +8,7 @@ k15 $ slow 18 $
 note ((+56) <$> (foldEvery [2,3,4] ((+12) <$>)) "[{0 -5 -3 -8 -2}%4, {0 5 7 -2 9 11 14}%4, {4 0 12 11 9 5}%4]") |+| dur "4"
 
 k16 silence
+
 k15 silence
 
 bd $ note (preplace(1,1) "{1 1*1 [~ 1*2] 1 1*4? 1*2 1*4}%2" "0 8 0 8 1 6 8 9 3 8 7")
@@ -21,6 +22,3 @@ bd $ note (preplace(1,1) "{1 1*1 [~ 1*2] 1 1*4? 1*2 1*4}%2" "0 8 10 0 8 4 11 1 8
 |+| perf1 (scale 0 1 $ slow 4 sine1)
 |+| perf2 (scale 0 1 $ slow 6.21 sine1)
 |+| perf3 (scale 0 1 $ slow 8.31 sine1)
-
-
-hush

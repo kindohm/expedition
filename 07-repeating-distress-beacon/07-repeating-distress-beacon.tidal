@@ -5,7 +5,7 @@ slowspread ($) [id, rev, within (0.25, 0.75) (slow 2 . rev . stut 8 0.2 0.1), tr
 trunc 0.25, (|+| speed "-1.2 0.75 1.5 0.8"), id, within (0, 0.25) (slow 2 . rev . stut 8 0.2 0.2),
 iter 4, iter 4, (|+| coarse "16 32 64")] $
 foldEvery [3,2] (0.25 <~) $ stack [
-sound "milekr:1/2" |+| cut "4" |+| shape "0.4",
+sound "beakr/2" |+| cut "4" |+| shape "0.4",
 every 4 ((|+| speed "-1")) $ every 3 ((|+| speed "0.5")) $
 sound "~ defdo:1/2 nau/2 defdo/3" |+| delay "0.4" |+| cutoff "0.1" |+| resonance "0.01",
 whenmod 7 5 ((|+| speed "[1.5, 1.4]") . (|+| gain "0.9")) $ whenmod 12 8 (|+| gain "0") $

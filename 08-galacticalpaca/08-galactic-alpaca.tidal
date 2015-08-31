@@ -32,7 +32,7 @@ sound (samples "peri*8" (density 1.21 $ run 11)) |+| end "0.5" |+| speed "1.5" |
 whenmod 16 10 (const $ sound "~") $
 every 7 (|+| speed "0.5 -0.5") $
 whenmod 8 4 (rarely (|+| speed "{0.5 [1.5, 3] [2, 1.25]}%16")) $
-sound (samples "keys2b*8" (foldEvery [2,3] (0.25 ~>) $ every 4 (rev) $ run 10))
+sound (samples "alpkeys*8" (foldEvery [2,3] (0.25 ~>) $ every 4 (rev) $ run 10))
 |+| shape "0.4" |+| delay "0.1" |+| gain "0.9",
 foldEvery [2,3,4] (density 2) $ sound "alpch*4" |+| gain "0.9"
 ] |+| delaytime "0.25" |+| delayfeedback "0.5"
