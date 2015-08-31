@@ -1,0 +1,17 @@
+-- custom Tidal functions
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+let up = speed . ((1.059466**) <$>)
+
+-- midi stuff
+import Sound.Tidal.MIDI.Output
+
+-- choose one of the following three:
+import Sound.Tidal.SimpleSynth
+import Sound.Tidal.Rytm
+import Sound.Tidal.VolcaKeys
+
+-- midi boot-up
+keyStreams <- keyproxy 1 "Scarlett 18i8 USB" [(keys, 1),(keys, 2),(keys, 3),(keys, 4),(keys, 5),(keys, 6),(keys, 7),(keys, 8),(keys, 9),(keys, 10),(keys, 11),(keys, 12),(keys, 13),(keys, 14),(keys, 15),(keys, 16)]
+[bd,sd,rs,cp,bt,lt,mt,ht,ch,oh,cy,cb,k13,k14,k15,k16] <- sequence keyStreams
+
