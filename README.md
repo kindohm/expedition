@@ -5,7 +5,8 @@ It was composed and performed with [Tidal](http://tidal.lurk.org), a
 live-coding and algorithmic music pattern environment in the Haskell 
 programming language. It was produced August and September 2015.
 
-All audio was originally produced by [kindohm](http://github.com/kindohm) 
+Except for the drum breaks on _Selfies_, all audio was originally 
+produced by [kindohm](http://github.com/kindohm) 
 using FL Studio softsynths and hardware synthesizers. If you're 
 interested in how all sounds were produced in the studio, check out the 
 [for-audio-nerds](production/for-audio-nerds.md) doc for detailed
