@@ -1,22 +1,48 @@
 # Expedition
 
-_Expedition_ is a collection of electronic and algorithmic music. 
-It was composed and performed with [Tidal](http://tidal.lurk.org), a 
-live-coding and algorithmic music pattern environment in the Haskell 
-programming language. It was produced August and September 2015.
+_Expedition_ is a collection of electronic music composed and
+performed with [Tidal](http://tidal.lurk.org), a
+live-coding and algorithmic music pattern environment in the Haskell
+programming language.
 
-Except for the drum breaks on _Selfies_, all audio was originally 
-produced by [kindohm](http://github.com/kindohm) 
-using FL Studio softsynths and hardware synthesizers. If you're 
-interested in how all sounds were produced in the studio, check out the 
-[for-audio-nerds](production/for-audio-nerds.md) doc for detailed
+## Tracks
+
+Code for the tracks is located in the `tracks/` folder.
+
+1. Surface Transmission Decoding
+2. Escape Burn
+3. Slipstream Jump
+4. Termination Shock Transition
+5. Ring Surfing
+6. Encrypted Message From Home
+7. Repeating Distress Beacon
+8. Galactic Alpaca
+9. Atmospheric Probe Malfunction
+10. Humans Riding on Bicycles Taking Selfies
+11. Species / Anti-Species Annihilation
+12. Sorting Through Wreckage
+
+## License and Audio Samples
+
+_Expedition_ is released under the Creative Commons
+Attribution-ShareAlike license. You may use the material
+found in this repository (including any audio samples) by
+attributing the source work and keeping the license intact;
+please refer to the license details at
+[creativecommons.org/licenses/by-sa/4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Samples are located in the `samples/` folder.
+
+Except for the drum breaks on _Selfies_, all sampled audio in this repository was originally produced by [kindohm](http://github.com/kindohm)
+using FL Studio softsynths and hardware synthesizers. If you're
+interested in how all sounds were produced in the studio, check out
+the [for-audio-nerds](production/for-audio-nerds.md) doc for detailed
 audio production info.
 
-_Expedition_ is released under the Creative Commons 
-Attribution-ShareAlike license. You may use the audio and material
-found in this repository by keeping the license intact; please
-refer to the license details at 
-[creativecommons.org/licenses/by-sa/4.0](http://creativecommons.org/licenses/by-sa/4.0/). 
+Drum breaks on _Selfies_ are sourced from:
+
+- Dave Akuma, who has made his breaks available for free use
+- The _Think_ break, in the public domain
 
 ## Release
 
@@ -31,18 +57,8 @@ and usage.
 
 All tracks are in the `tracks/` folder. Make sure to eval the custom
 functions in 00-boot.tidal first before executing any of the other
-Tidal files. 
-
-Some tracks use the MIDI capabilities of Tidal. The track _Humans Riding
-on Bicycles Taking Selfies_ requires a MIDI device listening on port 16.
-The track _Sorting Through Wreckage_ requires MIDI devices on port
-0 (drum machine with 12 notes), port 15 (synth) and port 16 (synth).
-
-## Samples and Stems
+Tidal files.
 
 Most tracks use the Dirt sample synthesizer that pairs with Tidal.
-
-Samples will be made a part of this repository very soon.
-
-Track stems will become available for the MIDI/synth tracks in the
-near future.
+Two tracks use the MIDI capabilities of Tidal: _Humans Riding
+on Bicycles Taking Selfies_ and _Sorting Through Wreckage_.
