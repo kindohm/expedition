@@ -6,12 +6,9 @@ let up = speed . ((1.059466**) <$>)
 -- midi stuff
 import Sound.Tidal.MIDI.Output
 
--- choose one of the following three:
-import Sound.Tidal.SimpleSynth
+-- all MIDI flows through the Analog RYTM
 import Sound.Tidal.Rytm
-import Sound.Tidal.VolcaKeys
 
 -- midi boot-up
 keyStreams <- keyproxy 1 "Scarlett 18i8 USB" [(keys, 1),(keys, 2),(keys, 3),(keys, 4),(keys, 5),(keys, 6),(keys, 7),(keys, 8),(keys, 9),(keys, 10),(keys, 11),(keys, 12),(keys, 13),(keys, 14),(keys, 15),(keys, 16)]
 [bd,sd,rs,cp,bt,lt,mt,ht,ch,oh,cy,cb,k13,k14,k15,k16] <- sequence keyStreams
-
