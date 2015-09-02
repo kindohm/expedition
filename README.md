@@ -7,7 +7,12 @@ programming language.
 
 <ul>
   <li><a href="#tracks">Tracks</a></li>
-  <li><a href="#license">License and Audio Samples</a></li>
+  <li><a href="#license">License and Audio</a>
+    <ul>
+      <li><a href="#samples">Samples</a></li>
+      <li><a href="#stems">Stems</a></li>
+    </ul>
+  </li>
   <li><a href="#release">Release(s)</a></li>
   <li><a href="#running-the-code">Running the code in Tidal</a>
     <ul>
@@ -42,6 +47,7 @@ attributing the source work and keeping the license intact;
 please refer to the license details at
 [creativecommons.org/licenses/by-sa/4.0](http://creativecommons.org/licenses/by-sa/4.0/).
 
+##<a name="samples"></a>Samples
 Samples are located in the `samples/` folder.
 
 Except for the drum breaks on _Selfies_, all sampled audio in this
@@ -53,6 +59,9 @@ Drum breaks on _Selfies_ are sourced from:
 
 - Dave Akuma, who has made his breaks available for free use
 - The _Think_ break, in the public domain
+
+##<a name="stems"></a>Stems
+Audio stems for audio captured from hardware synths will be made available soon.
 
 #<a name="release"></a>Release(s)
 
