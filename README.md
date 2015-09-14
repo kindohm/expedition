@@ -191,7 +191,7 @@ Below is a listing of the sample names/folders used on each track.
   </li>
   <li>Humans Riding Bicycles Taking Selfies
     <ul>
-      <li>_also uses a stem track for the bass_</li>
+      <li><em>also uses a stem track for the bass</em></li>
       <li>akuma3</li>
       <li>akuma4</li>
       <li>akuma5</li>
@@ -227,7 +227,7 @@ Below is a listing of the sample names/folders used on each track.
   </li>
   <li>Sorting Through Wreckage
     <ul>
-      <li>*no samples used. uses stems for bass, pads, and drums*</li>
+      <li><em>no samples used. uses stems for bass, pads, and drums</em></li>
     </ul>
   </li>
 </ol>
