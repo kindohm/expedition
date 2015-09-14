@@ -93,7 +93,7 @@ simple setup with a single channel.
 #<a name="sampledetail"></a>Samples and Stems
 
 Samples are located in the `samples/` folder. Stems are located
-at (this shared folder)[https://drive.google.com/open?id=0B2CY0DSY3mxgfjF5T09SZUpxRXBKby1ZZjJKTzNsMjRlNHNSLUxYVXdGZDFwSVVDcThxSlE].
+at [this shared folder]([)https://drive.google.com/open?id=0B2CY0DSY3mxgfjF5T09SZUpxRXBKby1ZZjJKTzNsMjRlNHNSLUxYVXdGZDFwSVVDcThxSlE).
 
 Almost all tracks use samples in the `samples/` folder. There are a couple
 of exceptions: _Selfies_ has a bass stem track and _Wreckage_ has stems for
