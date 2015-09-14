@@ -6,19 +6,15 @@ live-coding and algorithmic music pattern environment in the Haskell
 programming language.
 
 <ul>
-  <li><a href="#tracks">Tracks</a></li>
-  <li><a href="#license">License and Audio</a>
-    <ul>
-      <li><a href="#samples">Samples</a></li>
-      <li><a href="#stems">Stems</a></li>
-    </ul>
-  </li>
+  <li><a href="#tracks">Track List</a></li>
+  <li><a href="#license">License</a></li>
   <li><a href="#release">Release(s)</a></li>
   <li><a href="#running-the-code">Running the code in Tidal</a>
     <ul>
       <li><a href="#midi">MIDI</a></li>
     </ul>
   </li>
+  <li><a href="#sampledetail">Track Sample Detail</a></li>
 </ul>
 
 #<a name="tracks"></a>Tracks
@@ -38,7 +34,7 @@ Code for the tracks is located in the `tracks/` folder.
 11. Species / Anti-Species Annihilation
 12. Sorting Through Wreckage
 
-#<a name="license"></a>License and Audio Samples
+#<a name="license"></a>License
 
 _Expedition_ is released under the Creative Commons
 Attribution-ShareAlike license. You may use the material
@@ -47,21 +43,15 @@ attributing the source work and keeping the license intact;
 please refer to the license details at
 [creativecommons.org/licenses/by-sa/4.0](http://creativecommons.org/licenses/by-sa/4.0/).
 
-##<a name="samples"></a>Samples
-Samples are located in the `samples/` folder.
-
 Except for the drum breaks on _Selfies_, all sampled audio in this
 repository was originally produced by
-[kindohm](http://github.com/kindohm)
-using FL Studio softsynths and hardware synthesizers.
+[Mike Hodnick](http://kindohm.com)
+using FL Studio softsynths, hardware synthesizers, and smart phone apps.
 
 Drum breaks on _Selfies_ are sourced from:
 
-- Dave Akuma, who has made his breaks available for free use
+- Dave Akuma, who made his breaks available for free use at [dogsonacid.com/threads/new-breaks-for-download.225872/](http://www.dogsonacid.com/threads/new-breaks-for-download.225872/)
 - The _Think_ break, in the public domain
-
-##<a name="stems"></a>Stems
-Audio stems for audio captured from hardware synths will be made available soon.
 
 #<a name="release"></a>Release(s)
 
@@ -99,3 +89,137 @@ machine was used on channels 1-12, and synths were used on channels
 
 Synth code on channels 15 and 16 could easily be played on a more
 simple setup with a single channel.
+
+#<a name="sampledetail"></a>Track Sample Detail
+
+Below is a listing of the sample names/folders used on each track.
+
+<ol>
+  <li>Surface Transmission Decoding
+    <ul>
+      <li>trans1</li>
+    </ul>
+  </li>
+  <li>Escape Burn
+    <ul>
+      <li>electrowave</li>
+      <li>fk</li>
+      <li>pockch</li>
+      <li>pockcp</li>
+      <li>pocks</li>
+    </ul>
+  </li>
+  <li>Slipstream Jump
+    <ul>
+      <li>b18b</li>
+      <li>kit2</li>
+      <li>kit3</li>
+      <li>kit4</li>
+      <li>kit5</li>
+      <li>kit6</li>
+      <li>kit7</li>
+      <li>slipcy</li>
+      <li>slipk</li>
+      <li>teks</li>
+      <li>ulh</li>
+    </ul>
+  </li>
+  <li>Termination Shock Transition
+    <ul>
+      <li>bit1</li>
+      <li>b18b</li>
+      <li>kit3</li>
+      <li>kit5</li>
+      <li>kit7</li>
+    </ul>
+  </li>
+  <li>Ring Surfing
+    <ul>
+      <li>gli1</li>
+      <li>peri</li>
+      <li>ringh</li>
+      <li>ringk</li>
+      <li>ringkit</li>
+      <li>ringpad</li>
+      <li>rings</li>
+      <li>vocad</li>
+    </ul>
+  </li>
+  <li>Ecrypted Message From Home
+    <ul>
+      <li>fall</li>
+      <li>fall2</li>
+    </ul>
+  </li>
+  <li>Repeating Distress Beacon
+    <ul>
+      <li>alonevox</li>
+      <li>b18b</li>
+      <li>beacch</li>
+      <li>beack</li>
+      <li>beakr</li>
+      <li>beacsub</li>
+      <li>defdo</li>
+      <li>fk</li>
+      <li>monst</li>
+      <li>nau</li>
+      <li>teks</li>
+    </ul>
+  </li>
+  <li>Galactic Alpaca
+    <ul>
+      <li>alpch</li>
+      <li>alpkeys</li>
+      <li>alps</li>
+      <li>d4</li>
+      <li>fk</li>
+      <li>peri</li>
+      <li>sea</li>
+    </ul>
+  </li>
+  <li>Atmospheric Probe Malfunction
+    <ul>
+      <li>keys2</li>
+    </ul>
+  </li>
+  <li>Humans Riding Bicycles Taking Selfies
+    <ul>
+      <li>akuma5</li>
+      <li>akuma4</li>
+      <li>akuma3</li>
+      <li>fk</li>
+      <li>fur1</li>
+      <li>fur2</li>
+      <li>fur3</li>
+      <li>funky</li>
+      <li>ion1</li>
+      <li>ion2</li>
+      <li>ion3</li>
+      <li>ion4</li>
+      <li>melt</li>
+      <li>selffx</li>
+      <li>selfcpr</li>
+      <li>selfs</li>
+      <li>teeny2</li>
+      <li>teeny3</li>
+      <li>teeny4</li>
+      <li>teeny1</li>
+      <li>think</li>
+    </ul>
+  </li>
+  <li>Species / Anti-Species Annihilation
+    <ul>
+      <li>alps</li>
+      <li>bit1</li>
+      <li>electrowave</li>
+      <li>fk</li>
+      <li>laz</li>
+      <li>teks</li>
+    </ul>
+  </li>
+  <li>Sorting Through Wreckage
+    <ul>
+      <li>(no samples used)</li>
+    </ul>
+  </li>
+</ol>
