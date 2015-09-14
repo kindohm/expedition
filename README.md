@@ -227,7 +227,7 @@ Below is a listing of the sample names/folders used on each track.
   </li>
   <li>Sorting Through Wreckage
     <ul>
-      <li>_no samples used. uses stems for bass, pads, and drums_</li>
+      <li>*no samples used. uses stems for bass, pads, and drums*</li>
     </ul>
   </li>
 </ol>
