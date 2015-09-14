@@ -14,7 +14,7 @@ sound "~ beacs:1" |+| speed "1.5",
 whenmod 9 6 (const $ sound "~") $ every 3 (rev) $ every 2 (jux(iter 4)) $ density 2 $
 sound "teks(3,8)" |+| speed (foldEvery [3,2] (0.25 ~>) $ "[1 0.8 -1 [1 0.5]]/2"),
 whenmod 17 10 (const $ sound "~") $ every 3 (|+| speed "0.5") $ slow 6 $
-(striate 128 $ sound "alonevox:4*4") |+| speed "[0.8, 0.7]",
+(striate 128 $ sound "alonevox*4") |+| speed "[0.8, 0.7]",
 density 2 $ sound "fk*4? beacs",
 jux (|+| speed "1.1") $ slow 2 $ sound "~ ~ beack*8? ~",
 slow 2 $ sound "~ [~ b18b/2] ~ beacsub/3"
