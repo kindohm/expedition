@@ -14,7 +14,7 @@ programming language.
       <li><a href="#midi">MIDI</a></li>
     </ul>
   </li>
-  <li><a href="#sampledetail">Track Sample Detail</a></li>
+  <li><a href="#sampledetail">Samples and Stems</a></li>
 </ul>
 
 #<a name="tracks"></a>Tracks
@@ -90,7 +90,14 @@ machine was used on channels 1-12, and synths were used on channels
 Synth code on channels 15 and 16 could easily be played on a more
 simple setup with a single channel.
 
-#<a name="sampledetail"></a>Track Sample Detail
+#<a name="sampledetail"></a>Samples and Stems
+
+Samples are located in the `samples/` folder. Stems are located
+at (this shared folder)[https://drive.google.com/open?id=0B2CY0DSY3mxgfjF5T09SZUpxRXBKby1ZZjJKTzNsMjRlNHNSLUxYVXdGZDFwSVVDcThxSlE].
+
+Almost all tracks use samples in the `samples/` folder. There are a couple
+of exceptions: _Selfies_ has a bass stem track and _Wreckage_ has stems for
+bass, pads, and drums.
 
 Below is a listing of the sample names/folders used on each track.
 
@@ -184,9 +191,10 @@ Below is a listing of the sample names/folders used on each track.
   </li>
   <li>Humans Riding Bicycles Taking Selfies
     <ul>
-      <li>akuma5</li>
-      <li>akuma4</li>
+      <li>_also uses a stem track for the bass_</li>
       <li>akuma3</li>
+      <li>akuma4</li>
+      <li>akuma5</li>
       <li>fk</li>
       <li>fur1</li>
       <li>fur2</li>
@@ -219,7 +227,7 @@ Below is a listing of the sample names/folders used on each track.
   </li>
   <li>Sorting Through Wreckage
     <ul>
-      <li>(no samples used)</li>
+      <li>_no samples used. uses stems for bass, pads, and drums_</li>
     </ul>
   </li>
 </ol>
