@@ -57,8 +57,8 @@ Drum breaks on _Selfies_ are sourced from:
 
 #<a name="release"></a>Release(s)
 
-_Expedition_ will be released digitally at
-[kindohm.bandcamp.com](http://kindohm.bandcamp.com) at a future date.
+_Expedition_ is released digitally at
+[https://kindohm.bandcamp.com/album/expedition](https://kindohm.bandcamp.com/album/expedition).
 
 #<a name="running-the-code"></a>Running the Code in Tidal
 
