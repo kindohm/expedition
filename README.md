@@ -17,6 +17,8 @@ programming language.
   <li><a href="#sampledetail">Samples and Stems</a></li>
 </ul>
 
+![Cover art created by Chris LeBlanc](https://github.com/kindohm/expedition/blob/master/cover.jpg?raw=true)
+
 #<a name="tracks"></a>Tracks
 
 Code for the tracks is located in the `tracks/` folder.
