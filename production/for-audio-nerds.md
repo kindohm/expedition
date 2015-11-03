@@ -17,7 +17,7 @@ hardware analog synths, and smart phone apps.
 	- Arturia Minibrute
 	- Elektron Analog RYTM
 	- Korg Volca Keys
--smart phone apps
+- smart phone apps
 	- 8 bit buckaroo
 - Composition, Sequencing, Logic, and Performance
 	- Tidal
