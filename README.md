@@ -233,3 +233,7 @@ Below is a listing of the sample names/folders used on each track.
     </ul>
   </li>
 </ol>
+
+# Support from the American Composers Forum
+
+Supported in part by the American Composers Forum through the 2014 Minnesota Emerging Composer Award funded by the Jerome Foundation.
